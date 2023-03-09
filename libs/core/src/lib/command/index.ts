@@ -308,7 +308,7 @@ export class Command<T extends CommandConfigOptions = CommandConfigOptions> {
       // TODO: refactor to address type issues
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      this.packageGraph = new PackageGraph(packages);
+      this.packageGraph = new PackageGraph(packages, "allDependencies", this.options.forceLocal);
     });
 
     return chain;
